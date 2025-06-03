@@ -1,7 +1,5 @@
 import dspy
 
-# This object inherits from the dspy.Signature class
-# The text inside """ is the prompt
 class analytical_planner(dspy.Signature):
     """ You are data analytics planner agent. You have access to three inputs
     1. Datasets

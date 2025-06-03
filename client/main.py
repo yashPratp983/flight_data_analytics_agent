@@ -68,7 +68,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-def analyze_flight_data(query, flight_bookings_file, airline_mapping_file, api_url="http://localhost:8000/analyze/"):
+def analyze_flight_data(query, flight_bookings_file, airline_mapping_file, api_url="https://flight-data-analytics-agent-1.onrender.com/analyze/"):
     """
     Make request to flight analysis API
     """
@@ -381,7 +381,7 @@ def main():
         # API URL configuration
         api_url = st.text_input(
             "API URL",
-            value="http://localhost:8000/analyze/",
+            value="https://flight-data-analytics-agent-1.onrender.com/analyze/",
             help="URL of the flight analysis API"
         )
         

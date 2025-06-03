@@ -1,6 +1,4 @@
 import dspy
-# I define analysis agents as those agents that are in the middle-layer
-# they produce code for a specialised data analysis task
 class preprocessing_agent(dspy.Signature):
     """ You are a data pre-processing agent, your job is to take a user-defined goal and available dataset,
     to build an exploratory analytics pipeline. You do this by outputing the required Python code. 
@@ -34,5 +32,3 @@ class sk_learn_agent(dspy.Signature):
     commentary = dspy.OutputField(desc="The comments about what analysis is being performed")
     code = dspy.OutputField(desc ="The code that does the Exploratory data analysis")
 
-## I worked on the data-viz agent and already optimized using DSPy.
-## The only big difference is that this agents takes another input of styling index
