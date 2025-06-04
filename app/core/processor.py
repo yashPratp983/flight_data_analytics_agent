@@ -47,7 +47,7 @@ class auto_analyst(dspy.Module):
 # in case the goal is unclear, it sends it to refined goal agent
         else:
             refined_goal = self.refine_goal(dataset=dict_['dataset'], goal=dict_['goal'], Agent_desc= dict_['Agent_desc'])
-            self.forward(query=refined_goal)
+            return self.forward(query=refined_goal)
 # passes the goal and other inputs to all respective agents in the plan
         for p in plan_list:
             inputs = {x:dict_[x] for x in self.agent_inputs[p.strip()]}
