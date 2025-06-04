@@ -42,7 +42,7 @@ class auto_analyst(dspy.Module):
         plan_list =[]
         code_list =[]
 # if the planner worked as intended it should give agents seperated by ->
-        if plan.plan.split('->'):
+        if '->' in plan.plan:
             plan_list = plan.plan.split('->')
 # in case the goal is unclear, it sends it to refined goal agent
         else:
